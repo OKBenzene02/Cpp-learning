@@ -1,0 +1,27 @@
+# depslib dependency file v1.0
+1634799814 source:c:\users\gouse\desktop\c and c++\new_programming\dsa_with_c_lang\main.c
+	<stdio.h>
+	<stdio.h>
+	<stdio.h>
+	<stdlib.h>
+
+1635774556 source:c:\users\gouse\desktop\c and c++\new_programming\dsa_with_c_lang\examples_dsa.c
+	<stdio.h>
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+	<stdio.h>
+	<stdlib.h>
+	<stdio.h>
+	<stdlib.h>
+
+1637719995 source:c:\users\gouse\desktop\c and c++\new_programming\dsa_with_c_lang\trees.c
+	<stdio.h>
+	<stdlib.h>
+	<stdio.h>
+	<stdlib.h>
+
+1637830431 source:c:\users\gouse\desktop\c and c++\new_programming\dsa_with_c_lang\hashtables.c
+	<stdio.h>
+	<stdio.h>
+
