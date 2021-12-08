@@ -1,0 +1,1 @@
+Debug/miscellaneous.cpp.o Debug/main.cpp.o Debug/DSA_trees.cpp.o Debug/DSA_examples.cpp.o Debug/Sorting_Algo.cpp.o   

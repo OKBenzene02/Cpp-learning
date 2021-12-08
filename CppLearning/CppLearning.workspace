@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeLite_Workspace Name="CppLearning" Database="" Version="10000">
+  <Project Name="cpphello" Path="cpphello/cpphello.project" Active="No"/>
+  <Project Name="cppBasics" Path="cppBasics/cppBasics.project" Active="No"/>
+  <Project Name="cppVariablesConstants" Path="cppVariablesConstants/cppVariablesConstants.project" Active="No"/>
+  <Project Name="class_to_be_done" Path="class_to_be_done/class_to_be_done.project" Active="No"/>
+  <Project Name="statements_operators" Path="statements_operators/statements_operators.project" Active="No"/>
+  <Project Name="Classes_objects" Path="Classes_objects/Classes_objects.project" Active="No"/>
+  <Project Name="DSA_using_Cplusplus" Path="DSA_using_Cplusplus/DSA_using_Cplusplus.project" Active="Yes"/>
+  <BuildMatrix>
+    <WorkspaceConfiguration Name="Debug" Selected="yes">
+      <Environment/>
+      <Project Name="cpphello" ConfigName="Debug"/>
+      <Project Name="cppBasics" ConfigName="Debug"/>
+      <Project Name="cppVariablesConstants" ConfigName="Debug"/>
+      <Project Name="class_to_be_done" ConfigName="Debug"/>
+      <Project Name="statements_operators" ConfigName="Debug"/>
+      <Project Name="Classes_objects" ConfigName="Debug"/>
+      <Project Name="DSA_using_Cplusplus" ConfigName="Debug"/>
+    </WorkspaceConfiguration>
+    <WorkspaceConfiguration Name="Release" Selected="yes">
+      <Environment/>
+      <Project Name="cpphello" ConfigName="Release"/>
+      <Project Name="cppBasics" ConfigName="Release"/>
+      <Project Name="cppVariablesConstants" ConfigName="Release"/>
+      <Project Name="class_to_be_done" ConfigName="Release"/>
+      <Project Name="statements_operators" ConfigName="Release"/>
+      <Project Name="Classes_objects" ConfigName="Release"/>
+      <Project Name="DSA_using_Cplusplus" ConfigName="Release"/>
+    </WorkspaceConfiguration>
+  </BuildMatrix>
+</CodeLite_Workspace>
