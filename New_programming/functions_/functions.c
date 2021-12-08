@@ -357,7 +357,7 @@ int main()
 }
 */
 ///---Bubble Sort---///
-
+/*
 #include<stdio.h>
 #define N 100
 void bubble_sort(int array[], int n)
@@ -395,6 +395,42 @@ int main()
         printf("%d ", array[i]);
     return 0;
 }
+*/
 
+///---Selection Sort---///
+/*
+#include<stdio.h>
 
+void selectionSort(int arr[], int n)
+{
+    int temp, min;
+    for (int i = 0; i < n - 2; i++)
+    {
+        min = i;
+        for (int j = i + 1; j <= n - 1; j++)
+        {
+            if (arr[j] < arr[min])
+            {
+                min = j;
+            }
+        }
+        temp = arr[i];
+        arr[i] = arr[min];
+        arr[min] = temp;
+    }
+}
 
+int main()
+{
+    int arr[] = {12, 34, 10, 9, 8, 45, 11}, n = sizeof(arr)/sizeof(arr[0]);
+
+    selectionSort(arr, n);
+
+    printf("Sorted elements are: ");
+    for (int i = 0; i < n; i++)
+    {
+        printf(" %d ", arr[i]);
+    }
+    return 0;
+}
+*/
