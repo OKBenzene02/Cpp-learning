@@ -13,7 +13,7 @@ CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
 User                   :=Liyakhat yousuf
-Date                   :=08/12/2021
+Date                   :=23/03/2022
 CodeLitePath           :="C:/Program Files/CodeLite"
 LinkerName             :=C:/MinGW/bin/g++.exe
 SharedObjectLinkerName :=C:/MinGW/bin/g++.exe -shared -fPIC
@@ -62,7 +62,7 @@ AS       := C:/MinGW/bin/as.exe
 ## User defined environment variables
 ##
 CodeLiteDir:=C:\Program Files\CodeLite
-Objects0=$(IntermediateDirectory)/miscellaneous.cpp$(ObjectSuffix) $(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IntermediateDirectory)/DSA_trees.cpp$(ObjectSuffix) $(IntermediateDirectory)/DSA_examples.cpp$(ObjectSuffix) $(IntermediateDirectory)/Sorting_Algo.cpp$(ObjectSuffix) 
+Objects0=$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IntermediateDirectory)/DSA_trees.cpp$(ObjectSuffix) $(IntermediateDirectory)/DSA_examples.cpp$(ObjectSuffix) $(IntermediateDirectory)/Sorting_Algo.cpp$(ObjectSuffix) $(IntermediateDirectory)/miscellaneous.cpp$(ObjectSuffix) 
 
 
 
@@ -93,12 +93,6 @@ PreBuild:
 ##
 ## Objects
 ##
-$(IntermediateDirectory)/miscellaneous.cpp$(ObjectSuffix): miscellaneous.cpp
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/miscellaneous.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/miscellaneous.cpp$(DependSuffix) -MM miscellaneous.cpp
-	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/CppLearning/CppLearning/DSA_using_Cplusplus/miscellaneous.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/miscellaneous.cpp$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/miscellaneous.cpp$(PreprocessSuffix): miscellaneous.cpp
-	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/miscellaneous.cpp$(PreprocessSuffix) miscellaneous.cpp
-
 $(IntermediateDirectory)/main.cpp$(ObjectSuffix): main.cpp
 	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/main.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/main.cpp$(DependSuffix) -MM main.cpp
 	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/CppLearning/CppLearning/DSA_using_Cplusplus/main.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IncludePath)
@@ -122,6 +116,12 @@ $(IntermediateDirectory)/Sorting_Algo.cpp$(ObjectSuffix): Sorting_Algo.cpp
 	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/CppLearning/CppLearning/DSA_using_Cplusplus/Sorting_Algo.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Sorting_Algo.cpp$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/Sorting_Algo.cpp$(PreprocessSuffix): Sorting_Algo.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Sorting_Algo.cpp$(PreprocessSuffix) Sorting_Algo.cpp
+
+$(IntermediateDirectory)/miscellaneous.cpp$(ObjectSuffix): miscellaneous.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/miscellaneous.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/miscellaneous.cpp$(DependSuffix) -MM miscellaneous.cpp
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/CppLearning/CppLearning/DSA_using_Cplusplus/miscellaneous.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/miscellaneous.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/miscellaneous.cpp$(PreprocessSuffix): miscellaneous.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/miscellaneous.cpp$(PreprocessSuffix) miscellaneous.cpp
 
 
 -include $(IntermediateDirectory)/*$(DependSuffix)

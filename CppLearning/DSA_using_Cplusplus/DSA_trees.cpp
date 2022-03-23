@@ -46,10 +46,12 @@ void adding_node()
         if (temp -> data > p -> data)
         {
             p -> right = temp;
+            cout<<temp -> data <<" is appended to the right.\n";
         }
         else
         {
             p -> left = temp;
+            cout<<temp -> data <<" is appended to the left.\n";
         }
     }
 
@@ -97,23 +99,24 @@ void PreOrder_Traversal(struct node* temp)
 
 }
 
-void Desc(int num)
-{
-    string conditon = (root == NULL) ? "root node" : "parent and child nodes";
-    if (num == 1)
-    {
-        system("cls");
-    }
-    cout<<"\tEnter 1 to create "<<conditon<<"\n\tEnter 2 to Inorder traversal\n\tEnter 3 to Postorder traversal\n\tEnter 4 to Postorder traversal\n";
-
-}
+//void Desc(int num)
+//{
+//    string conditon = (root == NULL) ? "root node" : "parent and child nodes";
+//    if (num == 1)
+//    {
+//        system("cls");
+//    }
+//    cout<<"\tEnter 1 to create "<<conditon<<"\n\tEnter 2 to Inorder traversal\n\tEnter 3 to Postorder traversal\n\tEnter 4 to Postorder traversal\n";
+//
+//}
 
 int main()
 {
     int num;
+    cout<<"\tEnter 1 to create a node.\n\tEnter 2 to Inorder traversal\n\tEnter 3 to Postorder traversal\n\tEnter 4 to Preorder traversal\n";
     do
     {
-        Desc(num);
+//        Desc(num);
         cout<<"enter a number: "<<endl;
         cin>>num;
         switch (num)

@@ -59,6 +59,7 @@ void display()
 int main()
 {
     int num;
+    cout<<"Enter 1 to Push elements.\nEnter 2 to pop elements.\nEnter 3 to display elements.\n";
     do
     {
         cout<<"Enter a number: "<<endl; //printf("Enter a number: ");
@@ -155,6 +156,7 @@ void display()
 int main()
 {
     int num;
+    cout<<"Enter 1 to Enqueue elements.\nEnter 2 to Dequeue elements.\nEnter 3 to display elements.\n";
     do
     {
         cout<<"Enter a number: "<<endl; //printf("Enter a number: ");

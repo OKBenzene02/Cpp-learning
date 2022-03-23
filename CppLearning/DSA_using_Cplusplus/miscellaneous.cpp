@@ -27,9 +27,11 @@ int main()
     
     for (int i = 0; i < n + 1; i++)
     {
-        cout<< i << " " << Fibbo(i)<<endl;
+        cout<<"\t"<< i << " " << Fibbo(i)<<endl;
     }
     
     return 0;
 }
 */
+
+
