@@ -365,24 +365,95 @@ int main()
 }
 */
 
-#include<iostream>
+//#include<iostream>
+//#include<stdlib.h>
+//#include<time.h>
+//#include<chrono>
+//using namespace std;
+//using namespace std::chrono;
+//
+//int Random(int n)
+//{
+////    int random = 1 + (rand() % n);
+//    return 1 + (rand() % n);
+//}
+//
+//
+//int main()
+//{
+//    int count = 0, arr[10000], n = 0, ele;
+//    cout<<"enter the size of the array: "<<endl;
+//    cin>>n;
+//    ele = Random(n);
+//    cout<<"Random number to search: "<<ele<<endl;
+////  Start time for assiging the values...
+////    auto s1 = high_resolution_clock::now();
+//    for (int i =0 ; i < n; i++)
+//    {
+//        arr[i]=1 + (rand() % n);
+//    }
+//// End time for assiging the values....
+////    auto e1 = high_resolution_clock::now();
+//    
+//// Start time for searching the element....
+//auto s2 = high_resolution_clock::now();
+//    for (int i = 0; i < n; i++)
+//    {
+//        count++;
+//        if (ele == arr[i])
+//        {
+//            cout<<"Element found at position "<<i<<endl;
+//            break;
+//        }
+//    }
+//    
+//// End time for searching the element....
+//    auto e2 = high_resolution_clock::now();
+//    
+////    double elap1 = double(duration_cast<microseconds>(e1 - s1).count());
+//    double elap2 = double(duration_cast<microseconds>(e2 - s2).count());
+//
+//    cout<<"Total iterations: "<<count<<endl;
+////    cout<<"For assiging the values: "<<elap1<<" microseconds"<<endl;
+//    cout<<"For searching the element: "<<elap2<<" microseconds"<<endl;
+//    return 0;
+//}
+
+
+# include<iostream>
+# include<time.h>
 #include<stdlib.h>
-#include<time.h>
-#include<chrono>
 using namespace std;
-using namespace std::chrono;
-int main()
-{
-    int arr[100000], add = 0;
-    auto start = system_clock::now();
-    for (int i = 0; i < 100000; i++)
+int main() {
+    int arr[100000], n, ele = rand();
+    cout<<"enter the size of the array: "<<endl;
+    cin>>n;
+    
+    clock_t s1, e1, s2, e2;
+    double et1, et2;
+    
+    s1 = clock();
+
+    /* Put your code here */
+    for (int i = 0; i < n; i++)
     {
-        add += rand();
-        //arr[i] = rand();        
+        arr[i] = rand();
     }
-    auto end = system_clock::now();
-    auto duration = duration_cast<microseconds>(end - start).count();
-    cout<<"time taken in microseconds: "<<duration<<endl;
-    cout<<"Addition: "<<add<<endl;
+    e1 = clock();
+    
+    s2 = clock();
+    for (int i = 0; i < n; i++)
+    {
+        if (ele == arr[i])
+        {
+            cout<<"element found..."<<endl;
+            break;
+        }
+    }
+    e2 = clock();
+    et1 = ((double)(e1 - s1)*1e-3);//CLOCKS_PER_SEC;
+    et2 =  ((double)(e2 - s2)*1e-3);//CLOCKS_PER_SEC;
+    cout<<"Time taken for assiging the values: "<<et1<<" secs"<<endl;
+    cout<<"Time taken for searching the value: "<<et2<<" secs"<<endl;
     return 0;
 }
