@@ -93,6 +93,7 @@
     </Configuration>
   </Settings>
   <VirtualDirectory Name="src">
+    <File Name="Graphs_in_dsa.cpp"/>
     <File Name="miscellaneous.cpp"/>
     <File Name="Sorting_Algo.cpp"/>
     <File Name="DSA_trees.cpp"/>

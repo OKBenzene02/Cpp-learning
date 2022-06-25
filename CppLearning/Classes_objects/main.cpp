@@ -24,6 +24,8 @@ int main()
 using namespace std;
 
 class Example{
+private:
+    string name;
 public:
     void details(string x)
     {
@@ -33,8 +35,7 @@ public:
     {
         return name;
     }
-private:
-    string name;
+
 };
 int main()
 {
@@ -44,6 +45,7 @@ int main()
     return 0;
 }
 */
+
 /*
 #include<iostream>
 using namespace std;
@@ -90,6 +92,8 @@ int main()
 }
 */
 
+/*** Classes and objects ***/
+/*
 #include<iostream>
 using namespace std;
 
@@ -120,3 +124,4 @@ int main()
     mereObjects.volume();
     return 0;
 }
+*/

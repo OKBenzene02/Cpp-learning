@@ -4,30 +4,23 @@
   <wxString Value="C:\CppLearning\CppLearning\CppLearning.workspace" Name="m_workspaceName"/>
   <TabInfoArray Name="TabInfoArray">
     <TabInfo>
-      <wxString Value="C:\CppLearning\CppLearning\DSA_using_Cplusplus\main.cpp" Name="FileName"/>
-      <int Value="432" Name="FirstVisibleLine"/>
-      <int Value="449" Name="CurrentLine"/>
+      <wxString Value="C:\CppLearning\CppLearning\competitive_programming\programming.cpp" Name="FileName"/>
+      <int Value="805" Name="FirstVisibleLine"/>
+      <int Value="873" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
     <TabInfo>
-      <wxString Value="C:\CppLearning\CppLearning\DSA_using_Cplusplus\DSA_examples.cpp" Name="FileName"/>
-      <int Value="153" Name="FirstVisibleLine"/>
-      <int Value="153" Name="CurrentLine"/>
+      <wxString Value="C:\CppLearning\CppLearning\DSA_using_Cplusplus\Graphs_in_dsa.cpp" Name="FileName"/>
+      <int Value="224" Name="FirstVisibleLine"/>
+      <int Value="230" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
     <TabInfo>
-      <wxString Value="C:\CppLearning\CppLearning\DSA_using_Cplusplus\DSA_trees.cpp" Name="FileName"/>
-      <int Value="45" Name="FirstVisibleLine"/>
-      <int Value="48" Name="CurrentLine"/>
-      <wxArrayString Name="Bookmarks"/>
-      <IntVector Name="CollapsedFolds"/>
-    </TabInfo>
-    <TabInfo>
-      <wxString Value="C:\CppLearning\CppLearning\DSA_using_Cplusplus\Sorting_Algo.cpp" Name="FileName"/>
-      <int Value="197" Name="FirstVisibleLine"/>
-      <int Value="213" Name="CurrentLine"/>
+      <wxString Value="C:\CppLearning\CppLearning\competitive_programming\Day-16.cpp" Name="FileName"/>
+      <int Value="174" Name="FirstVisibleLine"/>
+      <int Value="56" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>

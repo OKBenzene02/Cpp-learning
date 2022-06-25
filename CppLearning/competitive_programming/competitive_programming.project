@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<CodeLite_Project Name="cpphello" Version="11000" InternalType="Console">
+<CodeLite_Project Name="competitive_programming" Version="11000" InternalType="User templates">
   <Description/>
   <Dependencies/>
-  <VirtualDirectory Name="src">
-    <File Name="main.cpp"/>
-  </VirtualDirectory>
   <Settings Type="Executable">
     <GlobalSettings>
       <Compiler Options="" C_Options="" Assembler="">
@@ -95,6 +92,12 @@
       </Completion>
     </Configuration>
   </Settings>
+  <VirtualDirectory Name="src">
+    <File Name="Day-16.cpp"/>
+    <File Name="vectors.cpp"/>
+    <File Name="programming.cpp"/>
+    <File Name="main.cpp"/>
+  </VirtualDirectory>
   <Dependencies Name="Debug"/>
   <Dependencies Name="Release"/>
 </CodeLite_Project>

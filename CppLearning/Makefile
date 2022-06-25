@@ -1,8 +1,8 @@
 .PHONY: clean All
 
 All:
-	@echo "----------Building project:[ DSA_using_Cplusplus - Debug ]----------"
-	@cd "DSA_using_Cplusplus" && "$(MAKE)" -f  "DSA_using_Cplusplus.mk"
+	@echo "----------Building project:[ competitive_programming - Debug ]----------"
+	@cd "competitive_programming" && "$(MAKE)" -f  "competitive_programming.mk"
 clean:
-	@echo "----------Cleaning project:[ DSA_using_Cplusplus - Debug ]----------"
-	@cd "DSA_using_Cplusplus" && "$(MAKE)" -f  "DSA_using_Cplusplus.mk" clean
+	@echo "----------Cleaning project:[ competitive_programming - Debug ]----------"
+	@cd "competitive_programming" && "$(MAKE)" -f  "competitive_programming.mk" clean

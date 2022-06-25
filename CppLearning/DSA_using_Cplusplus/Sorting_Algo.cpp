@@ -212,3 +212,339 @@ int main()
     return 0;
 }
 */
+
+///--- Merge sort ---///
+/*
+#include<iostream>
+#include<stdlib.h>
+#include<time.h>
+using namespace std;
+int arr[1000*1000*100];
+
+void merge(int arr[],int low, int mid, int high)
+{
+    int i, j, k;
+    int leftSize = mid - low + 1, rightSize = high - mid;
+    int L[leftSize], R[rightSize];
+
+    for (i = 0; i < leftSize; i++)
+    {
+        L[i] = arr[low + i];
+    }
+
+    for (j = 0; j < rightSize; j++)
+    {
+        R[j] = arr[mid + 1 + j];
+    }
+
+    i=0;
+    j=0;
+    k=low;
+
+    while (i < leftSize && j < rightSize)
+    {
+        if (L[i] <= R[j])
+        {
+            arr[k] = L[i];
+            i++;
+        }
+        else
+        {
+            arr[k] = R[j];
+            j++;
+        }
+        k++;
+    }
+
+    while (i < leftSize)
+    {
+        arr[k] = L[i];
+        i++;
+        k++;
+    }
+
+    while (j < rightSize)
+    {
+        arr[k] = R[j];
+        j++;
+        k++;
+    }
+}
+
+void mergeSort(int arr[], int low, int high)
+{
+    int mid;
+    if (low < high)
+    {
+        mid = low + (high - low) / 2;
+        mergeSort(arr, low, mid);
+        mergeSort(arr, mid + 1, high);
+        merge(arr, low, mid, high);
+    }
+}
+
+int main()
+{
+    int n;
+    cout<<"enter the array size: "<<endl;
+    cin>>n;
+    
+    for (int i = 0; i < n; i++)
+    {
+        arr[i] = 1 + (rand() % n);
+    }
+    
+//    cout<<"Unsorted array: ";
+//    for (int i = 0; i < n; i++){
+//        cout<<" "<<arr[i];
+//    }
+    
+    clock_t start = clock();
+    
+    mergeSort(arr, 0, n - 1);
+    
+    cout<<"\nSorted array: "<<endl;
+    for (int i = 0; i < n; i++)
+    {
+        cout<<" "<<arr[i];
+    }
+    
+    clock_t end = clock() - start;
+    
+    double elap = double(end)/CLOCKS_PER_SEC;
+    cout<<"\nMeasured time: "<<elap<<endl;
+    
+    
+    return 0;
+}
+*/
+
+///--- Heap sort ---///
+/*
+#include<bits/stdc++.h>
+
+void swap(int *a, int *b)
+{
+    int temp= *a;
+    *a = *b;
+    *b = temp;
+}
+
+void heapify(int arr[], int n, int i)
+{
+    int largest = i;
+    int left = (2 * i) + 1;
+    int right = (2 * i) + 2;
+
+    if (left < n && arr[left] > arr[largest])
+    {
+        largest = left;
+    }
+    if (right < n && arr[right] > arr[largest])
+    {
+        largest = right;
+    }
+
+    if (largest != i)
+    {
+        swap(&arr[i], &arr[largest]);
+        heapify(arr, n, largest);
+    }
+}
+
+void heapSort(int arr[], int n)
+{
+    for (int i = n / 2 - 1; i >= 0; i--)
+    {
+        heapify(arr, n, i);
+    }
+    for (int i = n - 1; i >= 0; i--)
+    {
+        swap(&arr[0], &arr[i]);
+        heapify(arr, i, 0);
+    }
+}
+
+void display(int arr[], int n)
+{
+    for (int i = 0; i < n; i++)
+    {
+        cout<<" "<<arr[i];
+    }
+    cout<<endl;
+}
+
+int main()
+{
+    int array[] = {82,90,10,12,15,77,55,23}, n = sizeof(array)/sizeof(array[0]);
+
+    heapSort(array, n);
+    cout<<"The sorted array is "<<endl;
+    display(array, n);
+    return 0;
+}
+*/
+
+
+///--- Quick sort ---///
+/*
+#include<iostream>
+#include<stdlib.h>
+#include<time.h>
+using namespace std;
+int arr[1000*1000*100];
+
+void swap(int *a, int *b)
+{
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+}
+
+int partition(int arr[], int lo, int hi)
+{
+    int pivot = arr[lo], i = lo, j = hi;
+    while(i < j)
+    {
+        do{
+            i++;
+        }while(arr[i] <= pivot);
+
+        do{
+            j--;
+        }while(arr[j] > pivot);
+
+        if (i < j)
+        {
+            swap(&arr[i], &arr[j]);
+        }
+    }
+    swap(&arr[lo], &arr[j]);
+
+    return j;
+}
+
+void quickSort(int arr[], int lo, int hi)
+{
+    if (lo < hi)
+    {
+        int j = partition(arr, lo, hi);
+        quickSort(arr, lo, j);
+        quickSort(arr, j + 1, hi);
+    }
+
+}
+
+int main()
+{
+    int n;
+    cout<<"enter the array size: "<<endl;
+    cin>>n;
+    
+    for (int i = 0; i < n; i++)
+    {
+        arr[i] = 1 + (rand() % n);
+    }
+    
+//    cout<<"Unsorted array: ";
+//    for (int i = 0; i < n; i++){
+//        cout<<" "<<arr[i];
+//    }
+    
+    clock_t start = clock();
+    
+    quickSort(arr, 0, n);
+    
+    cout<<"\nSorted array: "<<endl;
+    for (int i = 0; i < n; i++)
+    {
+        cout<<" "<<arr[i]
+    }
+    
+    clock_t end = clock() - start;
+    
+    double elap = double(end)/CLOCKS_PER_SEC;
+    cout<<"\nMeasured time: "<<elap<<endl;
+    
+    
+    return 0;
+}
+*/
+
+/**** Graphs using Adjacency matrix ****/
+/*
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+
+    int v;
+    cout<<"enter the number of vertices: "<<endl;
+    cin>>v;
+
+    int vertices[v][v];
+    
+    //initialize all the values of the vertices array as zeros     
+    for (int i = 0; i < v; i++)
+    {
+        for (int j = 0; j < v; j++)
+        {
+            vertices[i][j] = 0;
+        }
+    }
+    
+    //Getting the inputs from the user asking for connecting the edge with some weight...
+    //-1 for edge not connected, 1 or some random integer for edge connected... 
+    
+    for (int i = 0; i < v; i++)
+    {
+        for (int j = 0; j < v; j++)
+        {
+            if (vertices[i][j] != 0 && vertices[i][j] != -1) 
+            {
+                cout<<"Connected edge for "<<i<<" and "<< j<<endl;
+            }
+            else if (vertices[i][j] == -1)
+            {
+                cout<<"edge not connected for "<<i<<" and "<<j<<endl;
+            }
+            else{
+                cout<<"connection between "<<i<<" and "<<j<<endl;
+                cin>>vertices[i][j]; 
+                if (vertices[i][j] != 0)
+                {
+                    vertices[j][i] = vertices[i][j];
+                }
+                else
+                {
+                    vertices[j][i] = -1;
+                }
+            }
+            
+        }
+    }
+    cout<<endl;
+    cout<<"\t"<<"The Final adjacancy matrix: "<<endl;
+    for (int i = 0; i < v; i++)
+    {
+        for (int j = 0; j < v; j++)
+        {
+            if (vertices[i][j] == -1)
+            {
+                vertices[i][j] = 0;
+                cout<<"\t"<<vertices[i][j]<<"\t";
+            }
+            else{
+                cout<<"\t"<<vertices[i][j]<<"\t";
+            }
+        }
+        cout<<endl;
+    }
+        
+
+    return 0;
+}
+*/

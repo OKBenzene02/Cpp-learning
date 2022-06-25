@@ -387,13 +387,13 @@ int main()
 //    ele = Random(n);
 //    cout<<"Random number to search: "<<ele<<endl;
 ////  Start time for assiging the values...
-////    auto s1 = high_resolution_clock::now();
+//    auto s1 = high_resolution_clock::now();
 //    for (int i =0 ; i < n; i++)
 //    {
 //        arr[i]=1 + (rand() % n);
 //    }
 //// End time for assiging the values....
-////    auto e1 = high_resolution_clock::now();
+//    auto e1 = high_resolution_clock::now();
 //    
 //// Start time for searching the element....
 //auto s2 = high_resolution_clock::now();
@@ -410,22 +410,23 @@ int main()
 //// End time for searching the element....
 //    auto e2 = high_resolution_clock::now();
 //    
-////    double elap1 = double(duration_cast<microseconds>(e1 - s1).count());
+//    double elap1 = double(duration_cast<microseconds>(e1 - s1).count());
 //    double elap2 = double(duration_cast<microseconds>(e2 - s2).count());
 //
 //    cout<<"Total iterations: "<<count<<endl;
-////    cout<<"For assiging the values: "<<elap1<<" microseconds"<<endl;
+//    cout<<"For assiging the values: "<<elap1<<" microseconds"<<endl;
 //    cout<<"For searching the element: "<<elap2<<" microseconds"<<endl;
 //    return 0;
 //}
 
-
+/*
 # include<iostream>
 # include<time.h>
 #include<stdlib.h>
+int arr[100000000];
 using namespace std;
 int main() {
-    int arr[100000], n, ele = rand();
+    int  n, ele = rand();
     cout<<"enter the size of the array: "<<endl;
     cin>>n;
     
@@ -434,7 +435,7 @@ int main() {
     
     s1 = clock();
 
-    /* Put your code here */
+
     for (int i = 0; i < n; i++)
     {
         arr[i] = rand();
@@ -453,7 +454,176 @@ int main() {
     e2 = clock();
     et1 = ((double)(e1 - s1)*1e-3);//CLOCKS_PER_SEC;
     et2 =  ((double)(e2 - s2)*1e-3);//CLOCKS_PER_SEC;
-    cout<<"Time taken for assiging the values: "<<et1<<" secs"<<endl;
-    cout<<"Time taken for searching the value: "<<et2<<" secs"<<endl;
+    cout<<"Time taken for assiging the values: "<<et1<<" milli secs"<<endl;
+    cout<<"Time taken for searching the value: "<<et2<<" milli secs"<<endl;
     return 0;
 }
+*/
+
+/*
+ * Linear search with execution time*/
+ /*
+#include<iostream>
+#include<stdlib.h>
+#include<time.h>
+using namespace std;
+
+int arr[1000*1000*100];
+
+void linear(int n, int ele)
+{
+    for (int i = 0; i < n; i++)
+    {
+        arr[i] = 1 + (rand() % n);
+    }
+    
+    for (int i = 0; i < n; i++)
+    {
+        if (arr[i] == ele)
+        {
+            cout<<"element found at "<<i<<endl;
+            break;
+        }
+    }
+    cout<<"the elements in the array..."<<endl;
+    for (int i = 0; i < n; i++)
+    {
+        cout<<arr[i]<<" ";
+    }
+}
+
+
+int main(){
+    int n, ele;
+    cout<<"enter the array size: "<<endl;
+    cin>>n;
+    
+    cout<<"enter the element to search: ";
+    cin>>ele;
+    
+    cout<<"Element to search: "<<ele<<endl;
+    
+    clock_t start = clock();
+    
+    linear(n, ele);
+    
+    clock_t end = clock() - start;
+    
+    double elap = double(end)/CLOCKS_PER_SEC;
+    cout<<"\nMeasured time: "<<elap<<endl;
+    
+    return 0;
+}
+*/
+
+/* Binary search with execution time */
+/*
+#include<bits/stdc++.h>
+#include<stdlib.h>
+#include<time.h>
+using namespace std;
+int arr[1000*1000*100];
+
+void bubbleSort(int arr[], int n)
+{
+    int temp;
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = i + 1; j < n; j++)
+        {
+            if(arr[i] > arr[j])
+            {
+            temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
+            }
+        }
+    }
+}
+
+int binarySearch(int arr[], int low, int high, int ele)
+{
+    int mid;
+    while (low <= high)
+    {
+        mid = (low + high)/2;
+        if (arr[mid] == ele)
+        {
+            return mid;
+        }
+        
+        if (arr[mid] > ele)
+        {
+            high = mid - 1;
+        }
+        
+        if (arr[mid] < ele)
+        {
+            low = mid + 1;
+        }
+    }
+    
+    return -1;
+}
+
+
+int main(){
+    
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    
+    int ele,  n, res;
+    
+    cout<<"Enter the size of the array: "<<endl;
+    cin>>n;
+    
+    cout<<"enter the element to search: "<<endl;
+    cin>>ele;
+    
+    clock_t start = clock();
+    
+    for (int i= 0; i < n; i++)
+    {
+        arr[i] = 1 + (rand() % n);
+    }
+    
+    bubbleSort(arr, n);
+    
+    for (int i= 0; i < n; i++)
+    {
+        cout<<arr[i]<<" ";
+    }
+    
+    cout<<endl;
+    
+    res = binarySearch(arr, 0, n - 1, ele);
+    
+    clock_t end = clock();
+    double elapsed = ((double)(end - start))/CLOCKS_PER_SEC;
+    
+    res == -1 ? cout<<"element not found...."<<endl : cout<<"element found at "<<res<<endl;
+    
+    cout<<"time taken: "<<elapsed<<endl;
+    
+    return 0;
+}
+*/
+
+/*
+#include<iostream>
+#include<stdlib.h>
+#include<time.h>
+using namespace std;
+
+int main()
+{
+    int ele;
+    srand(time(0));
+    for (int i = 0; i < 1; i++)
+    {
+        ele = 1 + (rand() % 10);
+    }
+    cout<<"the random element "<<ele<<endl;
+    return 0;
+}
+*/

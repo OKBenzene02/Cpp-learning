@@ -13,7 +13,7 @@ CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
 User                   :=Liyakhat yousuf
-Date                   :=23/03/2022
+Date                   :=25/06/2022
 CodeLitePath           :="C:/Program Files/CodeLite"
 LinkerName             :=C:/MinGW/bin/g++.exe
 SharedObjectLinkerName :=C:/MinGW/bin/g++.exe -shared -fPIC
@@ -62,7 +62,7 @@ AS       := C:/MinGW/bin/as.exe
 ## User defined environment variables
 ##
 CodeLiteDir:=C:\Program Files\CodeLite
-Objects0=$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IntermediateDirectory)/DSA_trees.cpp$(ObjectSuffix) $(IntermediateDirectory)/DSA_examples.cpp$(ObjectSuffix) $(IntermediateDirectory)/Sorting_Algo.cpp$(ObjectSuffix) $(IntermediateDirectory)/miscellaneous.cpp$(ObjectSuffix) 
+Objects0=$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IntermediateDirectory)/DSA_trees.cpp$(ObjectSuffix) $(IntermediateDirectory)/DSA_examples.cpp$(ObjectSuffix) $(IntermediateDirectory)/Sorting_Algo.cpp$(ObjectSuffix) $(IntermediateDirectory)/miscellaneous.cpp$(ObjectSuffix) $(IntermediateDirectory)/Graphs_in_dsa.cpp$(ObjectSuffix) 
 
 
 
@@ -122,6 +122,12 @@ $(IntermediateDirectory)/miscellaneous.cpp$(ObjectSuffix): miscellaneous.cpp
 	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/CppLearning/CppLearning/DSA_using_Cplusplus/miscellaneous.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/miscellaneous.cpp$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/miscellaneous.cpp$(PreprocessSuffix): miscellaneous.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/miscellaneous.cpp$(PreprocessSuffix) miscellaneous.cpp
+
+$(IntermediateDirectory)/Graphs_in_dsa.cpp$(ObjectSuffix): Graphs_in_dsa.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/Graphs_in_dsa.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/Graphs_in_dsa.cpp$(DependSuffix) -MM Graphs_in_dsa.cpp
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/CppLearning/CppLearning/DSA_using_Cplusplus/Graphs_in_dsa.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Graphs_in_dsa.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/Graphs_in_dsa.cpp$(PreprocessSuffix): Graphs_in_dsa.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Graphs_in_dsa.cpp$(PreprocessSuffix) Graphs_in_dsa.cpp
 
 
 -include $(IntermediateDirectory)/*$(DependSuffix)
