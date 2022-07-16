@@ -5,8 +5,13 @@
   <Project Name="class_to_be_done" Path="class_to_be_done/class_to_be_done.project" Active="No"/>
   <Project Name="statements_operators" Path="statements_operators/statements_operators.project" Active="No"/>
   <Project Name="Classes_objects" Path="Classes_objects/Classes_objects.project" Active="No"/>
+<<<<<<< HEAD
   <Project Name="DSA_using_Cplusplus" Path="DSA_using_Cplusplus/DSA_using_Cplusplus.project" Active="No"/>
   <Project Name="competitive_programming" Path="competitive_programming/competitive_programming.project" Active="Yes"/>
+=======
+  <Project Name="DSA_using_Cplusplus" Path="DSA_using_Cplusplus/DSA_using_Cplusplus.project" Active="Yes"/>
+  <Project Name="competitive_programming" Path="competitive_programming/competitive_programming.project" Active="No"/>
+>>>>>>> d488314 (third commit)
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug" Selected="yes">
       <Environment/>

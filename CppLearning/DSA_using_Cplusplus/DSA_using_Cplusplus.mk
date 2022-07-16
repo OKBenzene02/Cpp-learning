@@ -13,7 +13,11 @@ CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
 User                   :=Liyakhat yousuf
+<<<<<<< HEAD
 Date                   :=25/06/2022
+=======
+Date                   :=16/07/2022
+>>>>>>> d488314 (third commit)
 CodeLitePath           :="C:/Program Files/CodeLite"
 LinkerName             :=C:/MinGW/bin/g++.exe
 SharedObjectLinkerName :=C:/MinGW/bin/g++.exe -shared -fPIC

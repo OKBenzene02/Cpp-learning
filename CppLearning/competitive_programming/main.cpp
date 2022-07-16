@@ -37,6 +37,10 @@ int main()
 */
 
 ///---- New keyword and Delete keyword ----///
+<<<<<<< HEAD
+=======
+/*
+>>>>>>> d488314 (third commit)
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -61,4 +65,8 @@ int main()
     delete[] arr;
     cout<<arr[0]<<" "<<arr[1]<<" "<<arr[2]<<endl;
     return 0;
+<<<<<<< HEAD
 }
+=======
+}*/
+>>>>>>> d488314 (third commit)

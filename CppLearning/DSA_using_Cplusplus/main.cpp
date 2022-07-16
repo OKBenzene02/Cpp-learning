@@ -157,6 +157,11 @@ int main()
     }while (num != 0);
     return 0;
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> d488314 (third commit)
 */
 
 ///--- Single Linked list Implementation --- ///
@@ -626,4 +631,8 @@ int main()
     cout<<"the random element "<<ele<<endl;
     return 0;
 }
+<<<<<<< HEAD
+=======
+>>>>>>> da73b4d (second commit)
+>>>>>>> d488314 (third commit)
 */

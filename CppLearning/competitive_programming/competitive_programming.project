@@ -93,7 +93,12 @@
     </Configuration>
   </Settings>
   <VirtualDirectory Name="src">
+<<<<<<< HEAD
     <File Name="Day-16.cpp"/>
+=======
+    <File Name="Day-28.cpp"/>
+    <File Name="competitve_two.cpp"/>
+>>>>>>> d488314 (third commit)
     <File Name="vectors.cpp"/>
     <File Name="programming.cpp"/>
     <File Name="main.cpp"/>

@@ -429,6 +429,7 @@ int main()
 }
 */
 
+<<<<<<< HEAD
 /**** Adjacency matrix ****/
 /*
 #include<bits/stdc++.h>
@@ -481,6 +482,8 @@ int main()
 }
 */
 
+=======
+>>>>>>> d488314 (third commit)
 /**** Missing number using XOR method****/
 /*
 #include<bits/stdc++.h>
@@ -511,6 +514,83 @@ int main()
 }
 */
 
+<<<<<<< HEAD
+=======
+/**** Adjacency matrix ****/
+/*
+#include<iostream>
+using namespace std;
+
+int main()
+{
+
+    int v;
+    cout<<"enter the number of vertices: "<<endl;
+    cin>>v;
+
+    int vertices[v][v];
+    
+    //initialize all the values of the vertices array as zeros     
+    for (int i = 0; i < v; i++)
+    {
+        for (int j = 0; j < v; j++)
+        {
+            vertices[i][j] = 0;
+        }
+    }
+    
+    //Getting the inputs from the user asking for connecting the edge with some weight...
+    //-1 for edge not connected, 1 or some random integer for edge connected... 
+    
+    for (int i = 0; i < v; i++)
+    {
+        for (int j = 0; j < v; j++)
+        {
+            if (vertices[i][j] != 0 && vertices[i][j] != -1) 
+            {
+                cout<<"Connected edge for "<<i<<" and "<< j<<endl;
+            }
+            else if (vertices[i][j] == -1)
+            {
+                cout<<"edge not connected for "<<i<<" and "<<j<<endl;
+            }
+            else{
+                cout<<"connection between "<<i<<" and "<<j<<endl;
+                cin>>vertices[i][j]; 
+                if (vertices[i][j] != 0)
+                {
+                    vertices[j][i] = vertices[i][j];
+                }
+                else
+                {
+                    vertices[j][i] = -1;
+                }
+            }
+            
+        }
+    }
+    cout<<endl;
+    cout<<"\t"<<"The Final adjacancy matrix: "<<endl;
+    for (int i = 0; i < v; i++)
+    {
+        for (int j = 0; j < v; j++)
+        {
+            if (vertices[i][j] == -1)
+            {
+                vertices[i][j] = 0;
+                cout<<"\t"<<vertices[i][j]<<"\t";
+            }
+            else{
+                cout<<"\t"<<vertices[i][j]<<"\t";
+            }
+        }
+        cout<<endl;
+    }
+    return 0;
+}
+*/
+
+>>>>>>> d488314 (third commit)
 /*** Minimum and maximum in an array ***/ 
 /*
 #include<bits/stdc++.h>
@@ -705,11 +785,203 @@ int main()
 #include<bits/stdc++.h>
 using namespace std;
 
+<<<<<<< HEAD
 int main()
 {
     int arr[3];
     
     
+=======
+class Solution{
+    public:
+    void update(int a[], int n, int updates[], int k)
+    {
+        for (int i = 0; i < k; i++)
+        {
+            int j = updates[i] - 1;
+            a[j]++;
+        }
+        
+        
+        for (int i = 1; i < n; i++)
+        {
+            a[i] += a[i - 1];
+        }
+    }
+};
+
+int main()
+{
+    cout<<"hello\n";
+    int t; cin>>t;
+    while (t--)
+    {
+        int n, k;
+        cin>> n >> k;
+        int a[n] {0}, updates[k] {0};
+        for (int i = 0; i < k; i++)
+        {
+            cin>>updates[i];
+        }
+        Solution ob;
+        ob.update(a, n, updates, k);
+        
+        for (int i = 0; i < n; i++)
+        {
+            cout<<a[i]<<" ";
+        }
+        
+    }
+    
+    
+    return 0;
+}
+*/
+
+///---- 2D Prefix sum ---///
+/*
+#include <bits/stdc++.h>
+using namespace std;
+
+void prefixSum(int a[][3], int n)
+{
+    int psa[n][3];
+    
+    psa[0][0] = a[0][0];
+    
+    for (int j = 1; j < n; j++)
+    {
+        psa[0][j] = psa[0][j - 1] + a[0][j];
+    }
+    
+    for (int i = 1; i < n; i++)
+    {
+        psa[i][0] = psa[i - 1][0] + a[i][0];
+    }
+    
+    for (int i = 1; i < n; i++)
+    {
+        for (int j = 1; j < 3; j++)
+        {
+            psa[i][j] = psa[i-1][j] + psa[i][j-1] - psa[i-1][j-1] + a[i][j];
+        }
+    }
+    
+    cout<<"The Following Prefix Sum will be: "<<endl;
+    
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < 3; j++)
+        {
+            cout<<" "<<psa[i][j]<<"  ";
+        }
+        cout<<endl;
+    }
+        
+}
+
+int main()
+{
+    int a[][3] = {
+        {10, 20, 30},
+        {5, 10, 20},
+        {2, 4, 6}};
+    int n = sizeof(a)/sizeof(a[0]);
+    cout<<n<<endl;
+    prefixSum(a, n);
+    return 0;
+}
+*/
+
+///---- Differene array | range query update in O(1) ---///
+/** Method one**/
+/*
+#include <bits/stdc++.h>
+using namespace std;
+
+int a[4] = {10, 5, 20, 40}, n = sizeof(a)/sizeof(a[0]);
+
+void update(int l, int r, int x)
+{
+    for (int i = l; i <= r; i++)
+    {
+        a[i] += x;
+    }
+}
+
+void printArray()
+{
+    for (int i = 0; i < n; i++)
+    {
+        cout<<a[i]<<"  ";
+    }
+    cout<<endl;
+}
+
+int main()
+{
+    update(0, 1, 10);
+    printArray();
+    update(1, 3, 20);
+    update(2, 2, 30);
+    printArray();
+    return 0;
+}
+*/
+
+/** Method 2 **/
+/*
+#include <bits/stdc++.h>
+using namespace std;
+
+vector<int> differArray(vector<int>& a)
+{
+    int n = a.size();
+    vector<int> differ(n + 1);
+    differ[n] = 0;
+    differ[0] = a[0];
+    
+    for (int i = 1; i < n; i++)
+    {
+        differ[i] = a[i] - a[i - 1];
+    }
+    
+    return differ;
+}
+
+void update(vector<int>& D, int l, int r, int x)
+{
+    D[l] += x;
+    D[r + 1] -= x;
+    
+}
+
+void printArray(vector<int>& D, vector<int>& a)
+{
+    for (int i = 0; i < (int)a.size(); i++)
+    {
+        if (i == 0)
+        {
+            a[i] = D[i];
+        }
+        else{
+            a[i] = D[i] + a[i - 1];
+        }
+        cout<<a[i]<<" ";
+    }
+    cout<<endl;
+}
+
+int main()
+{
+    vector<int> a {10, 5, 20, 40};
+    
+    vector<int> d = differArray(a);
+    
+    update(d, 0, 1, 10);
+    printArray(d, a);
+    
+>>>>>>> d488314 (third commit)
     
     return 0;
 }
@@ -810,7 +1082,11 @@ int main()
 {
     int W = 50;
     
+<<<<<<< HEAD
     items arr[] = {{10, 60}, {20, 100}, {30, 120}};
+=======
+    items arr[] = {{2, 10}, {3, 5}, {5, 15}, {7,7}, {1,6}, {4,18}, {1,3}};
+>>>>>>> d488314 (third commit)
     
     int n = sizeof(arr) / sizeof(arr[0]);
     
@@ -819,6 +1095,53 @@ int main()
 }
 */
 
+<<<<<<< HEAD
+=======
+///--- 0/1 Knapsack ---///
+/*
+#include <bits/stdc++.h>
+using namespace std;
+int max(int a, int b)
+{
+    return (a  >  b) ? a : b;
+}
+int knapsack(int weight[], int profit[], int n, int W)
+{
+    int sack[n][W];
+    
+    for (int i = 0; i <= n; i++)
+    {
+        for (int w = 0; w <= W; w++)
+        {
+            if (i == 0 || w == 0)
+            {
+                sack[i][w] = 0;
+            }
+            else if (weight[i - 1] <= w)
+            {
+                 sack[i][w] = max(sack[i - 1][w], profit[i - 1] + sack[i - 1][w - weight[i - 1]]);
+            }
+            else
+            {
+                sack[i][w] = sack[i - 1][w];
+            }
+        }
+    }
+    
+    return sack[n][W];
+    
+} 
+int main()
+{
+    int weight[] = {2, 3, 4, 5}, profit[] = {1, 2, 5, 6}, n = sizeof(weight)/sizeof(weight[0]), W = 8;
+    
+    cout<<"Maximum profit obtained "<<knapsack(weight, profit, n, W);
+    return 0;
+}
+*/
+
+
+>>>>>>> d488314 (third commit)
 ///--- Disjoint set union ---/// 
 /*
 #include <bits/stdc++.h>
@@ -889,4 +1212,112 @@ int main()
     }
     return 0;
 }
+<<<<<<< HEAD
 */
+=======
+*/
+
+///--- Binomial coefficient using dynamic approach---///
+/*
+#include <bits/stdc++.h>
+using namespace std;
+
+int binomial(int n, int k)
+{
+    int c[n + 1][k + 1];
+    
+    for (int i = 0; i <= n; i++)
+    {
+        for (int j = 0; j <= k; j++)
+        {
+            c[i][j] = 0;
+        }
+    }
+    
+    for (int i = 0; i <= n; i++)
+    {
+        for (int j = 0; j <= k; j++)
+        {
+            if (j == 0 || i == j)
+            {
+                c[i][j] = 1;
+            }
+            else{
+                c[i][j] = c[i - 1][j] + c[i - 1][j - 1];
+            }
+        }
+    }
+    
+    return c[n][k];
+}
+
+int main()
+{
+    // where n > k > 0;
+    int n = 10, k = 7;
+    cout<< n << "C" << k << " = " << binomial(n, k);
+    return 0;
+}
+*/
+
+///--- Floyd warshall's algorithm ---///
+/*
+#include <bits/stdc++.h>
+using namespace std;
+
+int infinity = 9999999; // defined for edges not connected.
+int n = 4;
+
+int minimum(int a, int b)
+{
+    if (a < b)
+    {
+        return a;
+    }
+    else
+    {
+        return b;
+    }
+}
+
+void floyd(int arr[][4], int n)
+{
+    for (int k = 0; k < n; k++)
+    {
+        for (int i = 0; i < n; i++)
+        {
+            for (int j = 0; j < n; j++)
+            {
+                arr[i][j] = minimum(arr[i][j], arr[i][k] + arr[k][j]);
+            }
+        }
+    }
+    
+    cout<<"Final Floyd's matrix: "<<endl;
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < n; j++)
+        {
+            cout<<"\t"<<arr[i][j];
+        }
+        cout<<endl;
+    }
+    
+}
+
+int main()
+{
+    int matrix[][4] = {
+        {0, 3, infinity, 5},
+        {2, 0, infinity, 8},
+        {infinity, 1, 0, infinity},
+        {infinity, infinity, 2, 0}
+        }; 
+        
+    floyd(matrix, n);
+    
+    return 0;
+}
+*/
+
+>>>>>>> d488314 (third commit)
